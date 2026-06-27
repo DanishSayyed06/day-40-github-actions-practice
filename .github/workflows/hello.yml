@@ -2,6 +2,7 @@ name: Hello Workflow
 
 on: 
  push:
+  - main
 
 jobs:
   greet:
