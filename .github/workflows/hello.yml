@@ -8,7 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Print greeting
         run: echo "Hello from GitHub Actions!"
+
+      - name: Print date and time
+        run: date
+
+      - name: Print branch name
+        run: echo "The branch is ${{ github.ref_name }}"
+
+      - name: List files
+        run: ls -R
+
+      - name: Print runner OS
+        run: echo "The runner OS is $RUNNER_OS"
